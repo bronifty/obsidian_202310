@@ -3,6 +3,7 @@
 pg_dump -h db.gqwesvrevmawyljxhtlf.supabase.co -p 5432 -d postgres -U postgres -f dump.sql
 ```
 
+[advanced user management trigger to create public profile](https://supabase.com/docs/guides/auth/managing-user-data#using-triggers)
 ```sql
 -- inserts a row into public.profiles
 create function public.handle_new_user()
@@ -26,4 +27,3 @@ create trigger on_auth_user_created
   for each row execute procedure public.handle_new_user();
 ```
 
-test 
