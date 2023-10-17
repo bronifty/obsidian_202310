@@ -5,3 +5,5 @@ I'd like to discuss the quality management aspect of Data Lakehousing and specif
 Warehousing relies on history tables with start and end timestamps to version attributes with SCDs > Type 1. Lakehousing, on the other hand - via catalogs and metastores which are managed by catalogs - utilizes logical metadata table schema branching and copy-on-write data snapshots to preserve and manage lineage. 
 
 In Kimball Star Schema SCD inside the Warehouse, not only is storage and compute co-located, but the attribute and its data are co-located. in the Lakehouse, the schema metadata is separate and apart from the data layer and also managed and versioned separately.
+
+.

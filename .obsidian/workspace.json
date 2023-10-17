@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "supabase/local dev.md",
+                "file": "dremo/dipankar article.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "supabase/local dev.md",
+                "file": "dremo/dipankar article.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "supabase/local dev.md"
+                "file": "dremo/dipankar article.md"
               }
             }
           }
@@ -159,14 +159,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d903398925837a0b",
+  "active": "9c22879174a72795",
   "lastOpenFiles": [
+    "supabase/local dev.md",
     "dremo/dremio_dipankar_lakehouse_architecture.pdf",
     "dremo/dipankar article.md",
     "dremo",
     "README.md",
     "supabase/tech-support/cases.md",
-    "supabase/local dev.md",
     "remix-run-react-router/media/build-ui-remix-session.png",
     "remix-run-react-router/media",
     "remix-run-react-router",
