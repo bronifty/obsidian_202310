@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9c22879174a72795",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dremo/dipankar article.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,8 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d8ff6ff5ebd7cc1d",
+  "active": "d903398925837a0b",
   "lastOpenFiles": [
+    "dremo/dremio_dipankar_lakehouse_architecture.pdf",
+    "dremo/dipankar article.md",
+    "dremo",
     "README.md",
     "supabase/tech-support/cases.md",
     "supabase/local dev.md",
