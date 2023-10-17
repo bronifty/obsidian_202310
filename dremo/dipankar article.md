@@ -6,3 +6,7 @@ Warehousing relies on history tables with start and end timestamps to version at
 
 In Kimball Star Schema SCD inside the Warehouse, not only is storage and compute co-located, but the attribute and its data are co-located. in the Lakehouse, the schema metadata is separate and apart from the data layer and also managed and versioned separately.
 
+in RDBMS with compute storage schema and data co-located, if you make a schema change and want that reflected in your program, it requires a table migration involving a copy of the table data to the new version with its updated structure...
+
+with Lakehouse there's none of that. it's zero-copy on schema change. the logical metadata layer is but an overlay transparently governing the new data without the need to physically relocate it.
+
