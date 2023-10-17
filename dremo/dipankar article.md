@@ -14,3 +14,8 @@ Great paper and I agree with the flow and direction overall. There is one place 
 
 I downloaded the source paper you cited and i suppose it has some historical importance although I don't really care about it. Your documentation of it is academically rigorous. I just have a disagreement with the convention. Have a good one.
 
+One topic i would like to explore (collectively as an industry or sector or w/e) is the idea - in keeping with separation of storage and compute - of non-blocking read access and more or less unlimited analytical concurrency for distributed systems. We could, by a windy/jagged/tortuous path, achieve a single version of the truth again perhaps.
+
+I'm referring to the dematerialization of the relational database for online analytical processing systems and specifically ROLAP queries of course.
+
+
