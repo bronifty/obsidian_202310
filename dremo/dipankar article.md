@@ -10,3 +10,7 @@ in RDBMS with compute storage schema and data co-located, if you make a schema c
 
 with Lakehouse there's none of that. it's zero-copy on schema change. the logical metadata layer is but an overlay transparently governing the new data without the need to physically relocate it.
 
+Great paper and I agree with the flow and direction overall. There is one place where I think emphasis is overstated in one aspect and then in another way, you're missing a trick. I think ELT described as zero-copy transform-in-place is more representative than 'schema-on-read'.
+
+I downloaded the source paper you cited and i suppose it has some historical importance although I don't really care about it. Your documentation of it is academically rigorous. I just have a disagreement with the convention. Have a good one.
+
