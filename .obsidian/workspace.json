@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "winglang/git.md",
+                "file": "winglang/4297/4297 fix compiler.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "winglang/git.md",
+                "file": "winglang/4297/4297 fix compiler.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "winglang/git.md",
+                "file": "winglang/4297/4297 fix compiler.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "winglang/git.md"
+                "file": "winglang/4297/4297 fix compiler.md"
               }
             }
           }
@@ -161,8 +161,10 @@
   },
   "active": "9c22879174a72795",
   "lastOpenFiles": [
-    "dremio/dipankar article.md",
     "winglang/git.md",
+    "winglang/4297/4297 fix compiler.md",
+    "winglang/4297",
+    "dremio/dipankar article.md",
     "winglang",
     "supabase/local dev.md",
     "dremio/dremio_dipankar_lakehouse_architecture.pdf",
