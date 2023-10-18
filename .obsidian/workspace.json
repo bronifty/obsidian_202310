@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9c3829651164f6e8",
+        "id": "9c9c2ff59bee7670",
         "type": "tabs",
         "children": [
           {
-            "id": "3e4d15157e726694",
+            "id": "c58601bc2f08822c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dbt/dbt.md",
+                "file": "github_actions/github actions.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dbt/dbt.md",
+                "file": "github_actions/github actions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dbt/dbt.md",
+                "file": "github_actions/github actions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "dbt/dbt.md"
+                "file": "github_actions/github actions.md"
               }
             }
           }
@@ -146,12 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3e4d15157e726694",
+  "active": "c58601bc2f08822c",
   "lastOpenFiles": [
-    "remix-run-react-router/media/build-ui-remix-session.png",
-    "dbt/dbt.md",
-    "dbt",
     "README.md",
+    "github_actions/github actions.md",
+    "github_actions",
+    "rust/comprehensive rust google course.md",
+    "dbt/dbt.md",
+    "rust",
+    "remix-run-react-router/media/build-ui-remix-session.png",
+    "dbt",
     "winglang/4297/4297 fix compiler.md",
     "winglang/git.md",
     "winglang/4297",
@@ -166,8 +170,6 @@
     "supabase/tech-support/media/supabase-tech-support.pdf",
     "supabase/tech-support/media/2.png",
     "supabase/tech-support/media/1.png",
-    "supabase/tech-support/media",
-    "supabase/tech-support",
     "supabase/tech-support/tech-support.md",
     "supabase/tech-support/edge-functions.md",
     "supabase/auth/oauth.md",
