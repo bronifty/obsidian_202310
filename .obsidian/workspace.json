@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b194755ddea1c49e",
+        "id": "9c3829651164f6e8",
         "type": "tabs",
         "children": [
           {
-            "id": "d8ff6ff5ebd7cc1d",
+            "id": "3e4d15157e726694",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "supabase/local dev.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9c22879174a72795",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "winglang/4297/4297 fix compiler.md",
+                "file": "dbt/dbt.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "winglang/4297/4297 fix compiler.md",
+                "file": "dbt/dbt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "winglang/4297/4297 fix compiler.md",
+                "file": "dbt/dbt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "winglang/4297/4297 fix compiler.md"
+                "file": "dbt/dbt.md"
               }
             }
           }
@@ -159,19 +146,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9c22879174a72795",
+  "active": "3e4d15157e726694",
   "lastOpenFiles": [
-    "winglang/git.md",
+    "remix-run-react-router/media/build-ui-remix-session.png",
+    "dbt/dbt.md",
+    "dbt",
+    "README.md",
     "winglang/4297/4297 fix compiler.md",
+    "winglang/git.md",
     "winglang/4297",
     "dremio/dipankar article.md",
     "winglang",
     "supabase/local dev.md",
     "dremio/dremio_dipankar_lakehouse_architecture.pdf",
     "dremio",
-    "README.md",
     "supabase/tech-support/cases.md",
-    "remix-run-react-router/media/build-ui-remix-session.png",
     "remix-run-react-router/media",
     "remix-run-react-router",
     "supabase/tech-support/media/supabase-tech-support.pdf",
