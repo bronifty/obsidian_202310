@@ -24,4 +24,8 @@ git revert <commit-hash>
 ```sh
 git reset --hard <commit-hash>
 ```
+- upload and downlaod  code 
+```sh
+git push & pull
+```
 

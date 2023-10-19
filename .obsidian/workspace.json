@@ -11,9 +11,11 @@
             "id": "c58601bc2f08822c",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "github_actions/github-actions.pdf"
+                "file": "github_actions/github actions.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "github_actions/github-actions.pdf",
+                "file": "github_actions/github actions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "github_actions/github-actions.pdf",
+                "file": "github_actions/github actions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "github_actions/github-actions.pdf"
+                "file": "github_actions/github actions.md"
               }
             }
           }
@@ -146,8 +148,8 @@
   },
   "active": "c58601bc2f08822c",
   "lastOpenFiles": [
-    "github_actions/github actions.md",
     "github_actions/github-actions.pdf",
+    "github_actions/github actions.md",
     "README.md",
     "github_actions",
     "rust/comprehensive rust google course.md",
