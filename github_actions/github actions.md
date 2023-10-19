@@ -19,3 +19,9 @@ git checkout main
 ```sh
 git revert <commit-hash>
 ```
+- delete a commit 
+	- it will remove all commits after a specific commit (returns you to a commit history before that commit and only the history preceding it)
+```sh
+git reset --hard <commit-hash>
+```
+
