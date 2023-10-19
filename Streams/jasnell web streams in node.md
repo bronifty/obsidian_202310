@@ -91,11 +91,19 @@ function getSomeSource() {
   };
 }
 
-const transform = new TransformStream({
-  transform(chunk, controller) {
-    controller.enqueue(chunk.toUpperCase());
+function getSomeTransform(){
+  return {
+    transform(chunk, controller) {
+      controller.enqueue(`${chunk.toUpperCase()} yes hello this is dog`);
+    }
   }
-});
+}
+
+// const transform = new TransformStream({
+//   transform(chunk, controller) {
+//     controller.enqueue(chunk.toUpperCase());
+//   }
+// });
 
 function getSomeSink() {
   return {
@@ -118,9 +126,14 @@ function getSomeSink() {
 (async () => {
   const readable = new ReadableStream(getSomeSource());
   const writable = new WritableStream(getSomeSink());
+  const transform = new TransformStream(getSomeTransform());
   await readable.pipeThrough(transform).pipeTo(writable);
 })();
 
 ```
+
+> Checkpoint AI
+> Q: is it accurate regarding web streams in node: a ReadableStream's pull operation will only run to fill the queue once the promise is resolved
+> A: Yes, your understanding is accurate. In the Web Streams API, the `pull()` method is invoked by a `ReadableStream` whenever its internal data queue isn't full, and more data is needed. If the `pull()` method returns a promise, it won't be called again until the promise is resolved. This mechanism provides a natural backpressure model, preventing consumers from reading data from the source faster than it's available【8†source】.
 
 
