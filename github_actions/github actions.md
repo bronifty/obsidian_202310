@@ -79,7 +79,7 @@ git push -u origin main
 - in order to get permissions to push we need to (either set an ssh key or...) get a personal access token and set the url to include the username
 	- https : // username@repo-url
 ```sh
-git remote set-url origin https://your-username:your-personal-access-token@github.com
+git remote set-url origin https://your-username@github.com
 ```
 > [git-scm credentials](https://git-scm.com/docs/gitcredentials)
 
