@@ -29,3 +29,63 @@ git reset --hard <commit-hash>
 git push & pull
 ```
 
+### Branches
+- create a branch and switch to it
+```sh
+git checkout -b feature-branch
+```
+- create a branch
+```sh
+git branch feature-branch
+```
+- list branches
+```sh
+git branch
+```
+- switch to a branch
+```sh
+git checkout feature-branch
+```
+
+> - git checkout can be used with a commit hash on a branch or a branch name, which is the HEAD of a series of commits
+> - a branch will have all the commits of the original branch (eg switch to dev from main, dev includes the prior commits of main from which dev branched) 
+
+- delete a branch
+```sh
+git branch -D feature-branch
+```
+- create and checkout branch
+```sh
+git checkout -b feature-branch
+```
+- make changes on feature branch and merge into main locally
+	- checkout the branch which will have the changes merged into it
+	- requires a commit message (default provided can accept)
+```sh
+git checkout main
+git merge feature-branch # requires a commit message because it is a new commit
+```
+
+### Remote Branches
+- link
+```sh
+git remote add origin <url>
+git branch -M main
+```
+- push
+```sh
+git push -u origin main
+```
+- in order to get permissions to push we need to (either set an ssh key or...) get a personal access token and set the url to include the username
+	- https : // username@repo-url
+	- then set the personal access token as the password
+```sh
+git remote set-url origin https://bronifty@github.com/bronifty/reponame.git
+```
+> [git-scm credentials](https://git-scm.com/docs/gitcredentials)
+
+
+
+
+
+
