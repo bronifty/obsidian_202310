@@ -80,7 +80,6 @@ git push -u origin main
 	- https : // username@repo-url
 ```sh
 git remote set-url origin https://your-username:your-personal-access-token@github.com
-git remote set-url origin https://bronifty:abc@github.com/bronifty/reponame.git
 ```
 > [git-scm credentials](https://git-scm.com/docs/gitcredentials)
 
