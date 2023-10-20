@@ -1,4 +1,6 @@
 - [jasnell web streams in node](https://www.jasnell.me/posts/webstreams)
+- [codesandbox](https://codesandbox.io/p/sandbox/interesting-parm-76dd5y)
+- 
 ```js
 import { ReadableStream, WritableStream } from 'node:stream/web';
 
@@ -179,10 +181,10 @@ export function getSomeSource() {
 ```js
 import {
   Readable
-} from 'node:stream';
+} from 'node:stream'; 
 import {getSomeSource} from "./utils.mjs"; 
-const readable = new ReadableStream(getSomeSource()); // web stream
-const nodeReadable = Readable.fromWeb(readable); // convert web stream to node stream
+const readable = new ReadableStream(getSomeSource()); // web stream 
+const nodeReadable = Readable.fromWeb(readable); // convert web stream to node  stream
 nodeReadable.on('data', console.log); 
 ```
 
@@ -190,13 +192,11 @@ nodeReadable.on('data', console.log);
 - converting a node stream to web stream and reading it (in node)
 ```js
 import { Readable } from 'node:stream';
-
 const readable = new Readable({
   read(size) {
     this.push(Buffer.from('hello'));
   }
 });
-
 const readableStream = Readable.toWeb(readable);
 const reader = readableStream.getReader();
 const result = await reader.read();
