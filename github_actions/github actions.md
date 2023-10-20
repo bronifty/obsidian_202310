@@ -83,6 +83,18 @@ git remote set-url origin https://bronifty@github.com/bronifty/github-actions-ma
 ```
 > [git-scm credentials](https://git-scm.com/docs/gitcredentials)
 
+### Pull Request
+- if it's a simple change you can simply append the change from another branch without resolving any merge conflicts
+```sh
+# push the feature update
+git push feat 
+# switch back to main and merge the feature
+git checkout main
+git merge feat
+# push to main (appends feature change without conflict)
+git push main
+```
+
 
 
 
