@@ -106,3 +106,9 @@ git config --global user.email "bronifty@gmail.com"
 ```
 
 
+```shell
+git checkout spoild
+git diff main..spoild > spoild.patch
+git checkout main
+git apply spoild.patch
+```
