@@ -72,6 +72,10 @@ git merge feature-branch # requires a commit message because it is a new commit
 git remote add origin <url>
 git branch -M main
 ```
+- pull
+```sh
+git pull origin main
+```
 - push
 ```sh
 git push -u origin main
@@ -95,6 +99,10 @@ git merge feat
 git push main
 ```
 
-
+### Git Config
+```sh
+git config --global user.name "bronifty"
+git config --global user.email "bronifty@gmail.com"
+```
 
 
