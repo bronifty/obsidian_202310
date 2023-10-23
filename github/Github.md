@@ -127,3 +127,125 @@ Date:   Sun Oct 22 18:10:40 2023 -0400
     added README.md
 ```
 
+- git branch when in detached HEAD state will show that
+```sh
+git branch
+* (HEAD detached at c01d749)
+  main
+  second-branch
+  third-branch
+```
+
+- switch command works similarly to checkout but only works on branches
+- -c flag will create a new branch when switch to it
+```sh
+bronifty@ubuntu:~/codes/deleteme$ git switch third-branch
+Previous HEAD position was c01d749 added second file.md
+Switched to branch 'third-branch'
+bronifty@ubuntu:~/codes/deleteme$ git switch -c fourth-branch
+Switched to a new branch 'fourth-branch'
+```
+
+3 parts of a github project are: 
+1 working directory (local filesystem)
+2 staging area (added files to git tracking)
+3 git repo (committed files)
+
+- check tracked files
+```sh
+git ls-files
+```
+
+### Deleting Files
+- if i delete a file and check git ls-files, it will show the deleted file, but if i run git status then it will show the file has been deleted in the working directory
+```shell
+bronifty@ubuntu:~/codes/deleteme$ rm third-file.md 
+bronifty@ubuntu:~/codes/deleteme$ git ls-files
+README.md
+second-file.md
+third-file.md
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    third-file.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+- if i want to delete the branch, i can either commit the change with git commit -a or i can remove the branch from staging by running git rm third-file.md
+
+```shell
+bronifty@ubuntu:~/codes/deleteme$ git ls-files
+README.md
+second-file.md
+third-file.md
+bronifty@ubuntu:~/codes/deleteme$ rm third-file.md 
+bronifty@ubuntu:~/codes/deleteme$ git ls-files
+README.md
+second-file.md
+third-file.md
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    third-file.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bronifty@ubuntu:~/codes/deleteme$ git rm third-file.md
+rm 'third-file.md'
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    third-file.md
+
+bronifty@ubuntu:~/codes/deleteme$ git ls-files
+README.md
+second-file.md
+bronifty@ubuntu:~/codes/deleteme$ git commit -m "deleted third-file.md"
+[fourth-branch 43b7d0f] deleted third-file.md
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third-file.md
+```
+
+- we cleared files from our working directory; next we'll learn how to undo unstaged changes
+- i updated the README.md file but did not stage it (add to git)
+```sh
+git status
+On branch fourth-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+- now i will checkout the current branch - or revert the HEAD to the last commit - before the change, thereby undoing my unstaged change to README
+```sh
+bronifty@ubuntu:~/codes/deleteme$ git checkout README.md 
+Updated 1 path from the index
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+nothing to commit, working tree clean
+```
+- if we want to rollback unstaged changes in the whole working directory we can use dot
+	- i made changes to the README and second-file
+```sh
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   second-file.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bronifty@ubuntu:~/codes/deleteme$ git checkout .
+Updated 2 paths from the index
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+nothing to commit, working tree clean
+```
+
