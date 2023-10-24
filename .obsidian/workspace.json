@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "github/Github.md",
+                "file": "winglang/4297/fix notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "github/Github.md",
+                "file": "winglang/4297/fix notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "github/Github.md",
+                "file": "winglang/4297/fix notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "github/Github.md"
+                "file": "winglang/4297/fix notes.md"
               }
             }
           }
@@ -148,9 +148,13 @@
   },
   "active": "c58601bc2f08822c",
   "lastOpenFiles": [
+    "winglang/4297/image.png",
+    "winglang/4297/4297 fix compiler.md",
+    "winglang/4297/fix notes.md",
+    "winglang/git.md",
+    "github/Github.md",
     "github/slides-2022.pdf",
     "github/Untitled.md",
-    "github/Github.md",
     "github_actions/github-actions.pdf",
     "github",
     "github_actions/git-review.md",
@@ -164,8 +168,6 @@
     "rust",
     "remix-run-react-router/media/build-ui-remix-session.png",
     "dbt",
-    "winglang/4297/4297 fix compiler.md",
-    "winglang/git.md",
     "winglang/4297",
     "dremio/dipankar article.md",
     "winglang",

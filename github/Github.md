@@ -249,3 +249,114 @@ On branch fourth-branch
 nothing to commit, working tree clean
 ```
 
+- we can use the new keyword 'restore' to revert unstaged changes
+```sh
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   second-file.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bronifty@ubuntu:~/codes/deleteme$ git restore second-file.md 
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+nothing to commit, working tree clean
+```
+
+- removing unstaged changes from untracked files has a separate command - git clean
+	- git clean -df means delete force
+		- -dn means delete and note which will happen
+	- git clean can be run with a specific file or blank
+```sh
+bronifty@ubuntu:~/codes/deleteme$ touch untracked-file.txt
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        untracked-file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+bronifty@ubuntu:~/codes/deleteme$ git clean -d untracked-file.txt 
+fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean
+bronifty@ubuntu:~/codes/deleteme$ git clean -dn untracked-file.txt 
+Would remove untracked-file.txt
+bronifty@ubuntu:~/codes/deleteme$ git clean -dn
+Would remove untracked-file.txt
+bronifty@ubuntu:~/codes/deleteme$ git clean -df
+Removing untracked-file.txt
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+nothing to commit, working tree clean
+```
+
+- next we will undo staged changes
+	- with the old syntax it will require 2 commands
+		- git reset filename - unstages file
+			- bring the latest status in the HEAD to the staging area
+		- git checkout filename - revert unstaged change
+			- then checkout the initial state
+	
+```sh
+git status
+On branch fourth-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   second-file.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bronifty@ubuntu:~/codes/deleteme$ git add second-file.md 
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   second-file.md
+bronifty@ubuntu:~/codes/deleteme$ git reset second-file.md 
+Unstaged changes after reset:
+M       second-file.md
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   second-file.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bronifty@ubuntu:~/codes/deleteme$ git checkout second-file.md 
+Updated 1 path from the index
+```
+
+- new syntax - git restore --staged file
+```sh
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   second-file.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bronifty@ubuntu:~/codes/deleteme$ git add .
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   second-file.md
+
+bronifty@ubuntu:~/codes/deleteme$ git restore --staged second-file.md 
+bronifty@ubuntu:~/codes/deleteme$ git status
+On branch fourth-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   second-file.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bronifty@ubuntu:~/codes/deleteme$ git checkout second-file.md 
+Updated 1 path from the index
+```
+
+- git reset and restore do the same thing in this context, but restore was created to be more explicit
+- git reset has another purpose, which is to reset the HEAD to delete commits
