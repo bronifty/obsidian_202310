@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -146,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c58601bc2f08822c",
+  "active": "b0e576c44e8dc21a",
   "lastOpenFiles": [
     "winglang/4297/image.png",
     "winglang/4297/4297 fix compiler.md",
