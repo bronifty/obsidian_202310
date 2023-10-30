@@ -64,7 +64,7 @@ As you can see, the two sets of APIs have a lot of similarities:
 
 ### [](https://remix.run/docs/en/main/discussion/form-vs-fetcher#creating-a-new-record)Creating a New Record
 
-```
+```ts
 import type { ActionArgs } from "@remix-run/node"; // or cloudflare/deno
 import { redirect } from "@remix-run/node"; // or cloudflare/deno
 import {
