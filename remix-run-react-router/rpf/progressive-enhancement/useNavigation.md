@@ -1,7 +1,7 @@
 
 This hook provides information about a pending page navigation.
 
-```
+```ts
 import { useNavigation } from "react-router-dom";
 
 function SomeComponent() {
@@ -18,7 +18,7 @@ Copy code to clipboard
 
 The action of the form that was submitted, if any.
 
-```
+```ts
 // set from either one of these
 <Form action="/some/where" />;
 submit(formData, { action: "/some/where" });
@@ -30,7 +30,7 @@ Copy code to clipboard
 
 The method of the form that was submitted, if any.
 
-```
+```ts
 // set from either one of these
 <Form method="get" />;
 submit(formData, { method: "get" });
@@ -44,7 +44,7 @@ Any POST, PUT, PATCH, or DELETE navigation that started from a `<Form>` or `
 
 For example:
 
-```
+```ts
 // This form has the `email` field
 <Form method="post" action="/signup">
   <input name="email" />
@@ -71,13 +71,13 @@ This tells you what the next location is going to be.
 
 Normal navigations and GET form submissions transition through these states:
 
-```
+```ts
 idle → loading → idle
 ```
 
 Form submissions with POST, PUT, PATCH, or DELETE transition through these states:
 
-```
+```ts
 idle → submitting → loading → idle
 ```
 
