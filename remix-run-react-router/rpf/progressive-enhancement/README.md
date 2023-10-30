@@ -21,7 +21,7 @@ const { errors } = useActionData<typeof action>();
 
 ### Remix V2 Upgrade
 #### Deprecation of useTransition Hook
-- old api:
+> Old API
 ```ts
 import { useTransition } from "@remix-run/react"; 
 
@@ -31,6 +31,22 @@ function SomeComponent() {
 	transition.submission.formMethod; 
 	transition.submission.formAction; 
 	transition.type; 
+}
+```
+
+> New API
+
+```ts
+import { useNavigation } from "@remix-run/react";
+
+function SomeComponent() {
+  const navigation = useNavigation();
+  // transition.submission keys are flattened onto `navigation[key]`
+  navigation.formData;
+  navigation.formMethod;
+  navigation.formAction;
+  // this key is removed
+  navigation.type;
 }
 ```
 
